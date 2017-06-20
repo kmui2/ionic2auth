@@ -25,6 +25,8 @@
     "@ionic-native/splash-screen": "3.6.1",
     "@ionic-native/status-bar": "3.6.1",
     "@ionic/storage": "2.0.1",
+    "angular2-flash-messages": "^1.0.8",
+    "angular2-jwt": "^0.2.3",
     "base64url": "^2.0.0",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.17.2",

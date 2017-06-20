@@ -24,7 +24,7 @@ var UserForgotpasswordModule = (function () {
     return UserForgotpasswordModule;
 }());
 UserForgotpasswordModule = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["a" /* NgModule */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
         declarations: [
             __WEBPACK_IMPORTED_MODULE_2__user_forgotpassword__["a" /* UserForgotpassword */],
         ],

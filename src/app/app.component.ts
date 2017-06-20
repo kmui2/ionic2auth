@@ -1,3 +1,4 @@
+import { AuthService } from './../providers/auth.service';
 import { Component, ViewChild } from '@angular/core';
 import { Platform, MenuController, Nav } from 'ionic-angular';
 
@@ -23,7 +24,8 @@ export class MyApp {
     public platform: Platform,
     public menu: MenuController,
     public statusBar: StatusBar,
-    public splashScreen: SplashScreen
+    public splashScreen: SplashScreen,
+    private authService: AuthService
   ) {
     this.initializeApp();
 
@@ -46,6 +48,10 @@ export class MyApp {
   openPage(page) {
     // close the menu when clicking a link from the menu
     this.menu.close();
+    if (page.title === 'Logout') {
+      this.authService.logout();
+      console.log("logged out");
+    }
     // navigate to the new page if it is not the current page
     this.nav.setRoot(page.component);
   }
