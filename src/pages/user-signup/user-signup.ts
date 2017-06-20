@@ -40,6 +40,7 @@ export class UserSignup {
       message: message,
       showCloseButton: true,
       position: 'top',
+      duration: 3000,
       // dismissOnPageChange: true
     }
     this.toast.create(toastOptions).present();
@@ -77,20 +78,55 @@ export class UserSignup {
     }
 
     // Register user
-    this.authService.registerUser(user).subscribe(data => {
-      if (data.success) {
-        // this.flashMessage.show('You are now registered and can log in', { cssClass: 'alert-success', timeout: 3000 });
-      this.showToast('Registration Success!');
-      this.navCtrl.push(Dashboard);
-        // this.router.navigate(['/login']);
-      } else {
-      this.showToast('Something went wrong');
-        // this.router.navigate(['/register']);
-      }
-    });
+    this.authService.registerUser(user).subscribe(
+      data => {
+        if (data.success) {
+          this.showToast('Registration Success!');
+
+          // this.authService.getProfile().subscribe(
+          //   profile => {
+          //     this.authService.changeUser(profile.user);
+          //   },
+          //   err => {
+          //     console.log(err);
+          //     return false;
+          //   });
+          this.authService.authenticateUser(user).subscribe(data => {
+            if (data.success) {
+              this.authService.storeUserData(data.token, data.user);
+              // this.flashMessage.show('You are now logged in', {
+              //   cssClass: 'alert-success',
+              //   timeout: 5000
+              // });
+              // this.showToast('You are now logged in')
+              // this.router.navigate(['dashboard']);
+              this.authService.getProfile().subscribe(profile => {
+                this.authService.changeUser(profile.user);
+              },
+                err => {
+                  console.log(err);
+                  return false;
+                });
+
+              this.navCtrl.push(Dashboard);
+            } else {
+              // this.flashMessage.show(data.msg, {
+              //   cssClass: 'alert-danger',
+              //   timeout: 5000
+              // });
+              this.showToast(data.msg);
+              // this.router.navigate(['login']);
+            }
+          });
+
+          // this.navCtrl.push(Dashboard);
+        }
+        else {
+          this.showToast('Something went wrong');
+        }
+      });
 
   }
-
   dashboardPage() { this.navCtrl.push(Dashboard); }
   loginPage() { this.navCtrl.push(UserLogin); }
   forgotPasswordPage() { this.navCtrl.push(UserForgotpassword); }

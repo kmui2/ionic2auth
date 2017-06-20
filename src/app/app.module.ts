@@ -15,6 +15,8 @@ import { Dashboard } from '../pages/dashboard/dashboard';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { UserMenuComponent } from '../components/user-menu/user-menu';
+import { UserInitialComponent } from '../components/user-initial/user-initial';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     UserSignup,
     UserForgotpassword,
     Dashboard,
+    UserMenuComponent,
+    UserInitialComponent,
 
   ],
   imports: [

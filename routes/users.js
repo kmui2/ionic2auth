@@ -10,6 +10,8 @@ router.post('/register', (req, res, next) => {
   let newUser = new User({
     name: req.body.name,
     email: req.body.email,
+    firstName: req.body.firstName,
+    lastName: req.body.lastName,
     username: req.body.username,
     password: req.body.password
   });

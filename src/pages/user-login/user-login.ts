@@ -1,3 +1,4 @@
+import { MyApp } from './../../app/app.component';
 import { AuthService } from './../../providers/auth.service';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController, ToastOptions } from 'ionic-angular';
@@ -30,6 +31,7 @@ export class UserLogin {
       message: message,
       showCloseButton: true,
       position: 'top',
+      duration: 3000,
       // dismissOnPageChange: true
     }
     this.toast.create(toastOptions).present();
@@ -50,6 +52,14 @@ export class UserLogin {
         // });
         this.showToast('You are now logged in')
         // this.router.navigate(['dashboard']);
+        this.authService.getProfile().subscribe(profile => {
+          this.authService.changeUser(profile.user);
+        },
+        err => {
+          console.log(err);
+          return false;
+        });
+
         this.navCtrl.push(Dashboard);
       } else {
         // this.flashMessage.show(data.msg, {
