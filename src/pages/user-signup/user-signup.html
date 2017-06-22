@@ -12,8 +12,8 @@
 
     <ion-grid>
       <ion-row>
-        <ion-col><button ion-button block class="facebookButton"> Facebook</button></ion-col>
-        <ion-col><button ion-button block class="instagramButton"> Instagram</button></ion-col>
+        <ion-col><button ion-button block class="facebookButton" (click)="loginWithFacebook()"> Facebook</button></ion-col>
+        <ion-col><button ion-button block class="instagramButton" (click)="loginWithGoogle()"> Google</button></ion-col>
       </ion-row>
     </ion-grid>
 
@@ -21,22 +21,22 @@
 
     <ion-list no-lines padding-top>
       <ion-item>
-        <ion-input type="text" [(ngModel)]="firstName" name="firstName" placeholder="First Name"></ion-input>
+        <ion-input type="text" [(ngModel)]="firstName" name="firstName" placeholder="First Name"(enter)="onRegisterSubmit()"></ion-input>
       </ion-item>
       <ion-item>
-        <ion-input type="text" [(ngModel)]="lastName" name="lastName" placeholder="Last Name"></ion-input>
+        <ion-input type="text" [(ngModel)]="lastName" name="lastName" placeholder="Last Name"(enter)="onRegisterSubmit()"></ion-input>
       </ion-item>
       <ion-item>
-        <ion-input type="email" [(ngModel)]="email" name="email" placeholder="Email"></ion-input>
+        <ion-input type="email" [(ngModel)]="email" name="email" placeholder="Email"(enter)="onRegisterSubmit()"></ion-input>
       </ion-item>
       <ion-item>
-        <ion-input type="username" [(ngModel)]="username" name="username" placeholder="Username"></ion-input>
+        <ion-input type="username" [(ngModel)]="username" name="username" placeholder="Username"(enter)="onRegisterSubmit()"></ion-input>
       </ion-item>
       <ion-item>
-        <ion-input type="password" [(ngModel)]="password" name="password" placeholder="Password"></ion-input>
+        <ion-input type="password" [(ngModel)]="password" name="password" placeholder="Password"(enter)="onRegisterSubmit()"></ion-input>
       </ion-item>
       <ion-item>
-        <ion-input type="password" [(ngModel)]="passwordConfirm" name="passwordConfirm" placeholder="Confirm Password"></ion-input>
+        <ion-input type="password" [(ngModel)]="passwordConfirm" name="passwordConfirm" placeholder="Confirm Password" (enter)="onRegisterSubmit()"></ion-input>
       </ion-item>
     </ion-list>
     <button ion-button block round color="secondary" (click)="onRegisterSubmit()">Signup</button>

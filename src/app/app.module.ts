@@ -1,3 +1,5 @@
+import { Facebook } from '@ionic-native/facebook';
+import { GooglePlus } from '@ionic-native/google-plus';
 import { ValidateService } from './../providers/validate.service';
 import { AuthService } from './../providers/auth.service';
 import { BrowserModule } from '@angular/platform-browser';
@@ -34,7 +36,7 @@ import { UserInitialComponent } from '../components/user-initial/user-initial';
     BrowserModule,
     HttpModule,
     IonicModule.forRoot(MyApp),
-    FlashMessagesModule
+    FlashMessagesModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -52,6 +54,8 @@ import { UserInitialComponent } from '../components/user-initial/user-initial';
     ValidateService,
     AuthService,
     // AuthGuard,
+    GooglePlus,
+    Facebook
   ]
 })
 export class AppModule {}

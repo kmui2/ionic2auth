@@ -9,10 +9,10 @@
 
     <ion-grid>
       <ion-row>
-        <ion-col ><button ion-button block class="facebookButton">Login With Facebook</button></ion-col>
+        <ion-col ><button ion-button block class="facebookButton" (click)="loginWithFacebook()">Login With Facebook</button></ion-col>
       </ion-row>
       <ion-row>
-        <ion-col><button ion-button block class="instagramButton">Login With Instagram</button></ion-col>
+        <ion-col><button ion-button block class="instagramButton" (click)="loginWithGoogle()">Login With Google</button></ion-col>
       </ion-row>
     </ion-grid>
 
@@ -20,10 +20,10 @@
 
     <ion-list no-lines padding-top>
       <ion-item>
-        <ion-input type="text" placeholder="Username" [(ngModel)]="username"></ion-input>
+        <ion-input type="text" placeholder="Username" [(ngModel)]="username" (enter)="onLoginSubmit()"></ion-input>
       </ion-item>
       <ion-item>
-        <ion-input type="password" placeholder="Password" [(ngModel)]="password"></ion-input>
+        <ion-input type="password" placeholder="Password" [(ngModel)]="password" (enter)="onLoginSubmit()"></ion-input>
       </ion-item>
     </ion-list>
     <button ion-button block round color="secondary" (click)="onLoginSubmit()">Login</button>

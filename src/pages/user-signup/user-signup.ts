@@ -1,3 +1,5 @@
+import { GooglePlus } from '@ionic-native/google-plus';
+import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
 import { ValidateService } from './../../providers/validate.service';
 import { AuthService } from './../../providers/auth.service';
 import { Component } from '@angular/core';
@@ -27,8 +29,28 @@ export class UserSignup {
     private authService: AuthService,
     private validateService: ValidateService,
     private flashMessage: FlashMessagesService,
-    private toast: ToastController
+    private toast: ToastController,
+    private googlePlus: GooglePlus,
+    private fb: Facebook
   ) {
+  }
+
+
+
+  loginWithGoogle() {
+
+    this.googlePlus.login({})
+      .then(res => console.log(res))
+      .catch(err => console.error(err));
+  }
+
+  loginWithFacebook() {
+
+    this.fb.login(['public_profile', 'user_friends', 'email'])
+      .then((res: FacebookLoginResponse) => console.log('Logged into Facebook!', res))
+      .catch(e => console.log('Error logging into Facebook', e));
+
+    this.fb.logEvent(this.fb.EVENTS.EVENT_NAME_ADDED_TO_CART);
   }
 
   ionViewDidLoad() {
