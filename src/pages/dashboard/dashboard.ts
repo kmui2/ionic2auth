@@ -1,5 +1,7 @@
+
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+declare var google;
 
 /**
  * Generated class for the Dashboard page.
@@ -14,11 +16,20 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class Dashboard {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  showSearchbar: boolean = false;
 
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+  ) {
+  }
   ionViewDidLoad() {
     console.log('ionViewDidLoad Dashboard');
+  }
+
+  toggleSearchbar() {
+    this.showSearchbar = !this.showSearchbar;
+    console.log('showSearchbar = ' + this.showSearchbar);
   }
 
 }

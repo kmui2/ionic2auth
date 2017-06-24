@@ -24774,6 +24774,17 @@ page-dashboard ion-slides {
   max-height: 23%;
 }
 
+page-map .ios home-page .scroll,
+page-map .md home-page .scroll {
+  height: 100%;
+}
+
+page-map .ios home-page #map,
+page-map .md home-page #map {
+  width: 100%;
+  height: 100%;
+}
+
 .ios page-user-forgotpassword .toolbar-background, .md page-user-forgotpassword .toolbar-background, .wp page-user-forgotpassword .toolbar-background {
   background: transparent;
   border-style: none;

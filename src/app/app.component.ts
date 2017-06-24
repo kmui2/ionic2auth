@@ -1,3 +1,4 @@
+import { MapPage } from './../pages/map/map';
 import { AuthService } from './../providers/auth.service';
 import { Component, ViewChild } from '@angular/core';
 import { Platform, MenuController, Nav } from 'ionic-angular';
@@ -39,6 +40,7 @@ export class MyApp {
     // set our app's pages
     this.pages = [
       { title: 'Dashbaord',icon:'home', component: Dashboard },
+      { title: 'Map', icon: 'locate', component: MapPage },
       { title: 'Logout',icon:'lock', component: UserLogin }
     ];
   }

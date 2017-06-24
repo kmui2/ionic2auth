@@ -1,3 +1,5 @@
+import { MapPage } from './../pages/map/map';
+import { GoogleMaps } from '@ionic-native/google-maps';
 import { Facebook } from '@ionic-native/facebook';
 import { GooglePlus } from '@ionic-native/google-plus';
 import { ValidateService } from './../providers/validate.service';
@@ -30,6 +32,7 @@ import { UserInitialComponent } from '../components/user-initial/user-initial';
     Dashboard,
     UserMenuComponent,
     UserInitialComponent,
+    MapPage
 
   ],
   imports: [
@@ -46,6 +49,7 @@ import { UserInitialComponent } from '../components/user-initial/user-initial';
     UserSignup,
     UserForgotpassword,
     Dashboard,
+    MapPage
   ],
   providers: [
     StatusBar,
@@ -55,7 +59,8 @@ import { UserInitialComponent } from '../components/user-initial/user-initial';
     AuthService,
     // AuthGuard,
     GooglePlus,
-    Facebook
+    Facebook,
+    GoogleMaps
   ]
 })
 export class AppModule {}
