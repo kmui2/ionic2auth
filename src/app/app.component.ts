@@ -1,3 +1,5 @@
+import { SettingsPage } from './../pages/settings/settings';
+import { ChartsPage } from './../pages/charts/charts';
 import { MapPage } from './../pages/map/map';
 import { AuthService } from './../providers/auth.service';
 import { Component, ViewChild } from '@angular/core';
@@ -40,8 +42,9 @@ export class MyApp {
     // set our app's pages
     this.pages = [
       { title: 'Dashbaord',icon:'home', component: Dashboard },
-      { title: 'Map', icon: 'locate', component: MapPage },
-      { title: 'Logout',icon:'lock', component: UserLogin }
+      { title: 'Map', icon: 'pin', component: MapPage },
+      { title: 'Charts', icon:'stats', component: ChartsPage},
+      { title: 'Logout',icon:'log-out', component: UserLogin }
     ];
   }
 
@@ -63,5 +66,10 @@ export class MyApp {
     }
     // navigate to the new page if it is not the current page
     this.nav.setRoot(page.component);
+  }
+
+  openSettings() {
+    this.menu.close();
+    this.nav.setRoot(SettingsPage);
   }
 }

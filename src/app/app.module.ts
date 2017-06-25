@@ -1,3 +1,5 @@
+import { SettingsPage } from './../pages/settings/settings';
+import { ChartsPage } from './../pages/charts/charts';
 import { MapPage } from './../pages/map/map';
 import { GoogleMaps } from '@ionic-native/google-maps';
 import { Facebook } from '@ionic-native/facebook';
@@ -32,7 +34,9 @@ import { UserInitialComponent } from '../components/user-initial/user-initial';
     Dashboard,
     UserMenuComponent,
     UserInitialComponent,
-    MapPage
+    MapPage,
+    ChartsPage,
+    SettingsPage
 
   ],
   imports: [
@@ -44,12 +48,13 @@ import { UserInitialComponent } from '../components/user-initial/user-initial';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-
+    SettingsPage,
     UserLogin,
     UserSignup,
     UserForgotpassword,
     Dashboard,
-    MapPage
+    MapPage,
+    ChartsPage
   ],
   providers: [
     StatusBar,

@@ -32,4 +32,7 @@ export class Dashboard {
     console.log('showSearchbar = ' + this.showSearchbar);
   }
 
+  onInput(search) {
+
+  }
 }

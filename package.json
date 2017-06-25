@@ -35,6 +35,7 @@
         "base64url": "^2.0.0",
         "bcryptjs": "^2.4.3",
         "body-parser": "^1.17.2",
+        "chart.js": "^2.6.0",
         "cordova-android": "^6.2.3",
         "cordova-plugin-compat": "^1.0.0",
         "cordova-plugin-console": "^1.0.7",

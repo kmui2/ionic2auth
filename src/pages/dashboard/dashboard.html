@@ -9,7 +9,7 @@
   </ion-navbar>
 
   <ion-searchbar *ngIf="showSearchbar" [(ngModel)]="searchInput" [animated]="animated" [showCancelButton]="shouldShowCancel"
-  (ionInput)="onInput($event)">
+  [showCancelButton]="true" [cancelButtonText]="X" (ionInput)="onInput($event)">
   </ion-searchbar>
 
 </ion-header>
