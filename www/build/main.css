@@ -24770,6 +24770,14 @@ ion-menu ion-content ion-list .item-inner ion-icon {
   color: #000;
 }
 
+page-charts .scroll-content {
+  background-color: #fff;
+}
+
+page-charts ion-card-header {
+  font-weight: bold;
+}
+
 page-dashboard ion-slides {
   max-height: 23%;
 }
