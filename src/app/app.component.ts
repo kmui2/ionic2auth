@@ -1,3 +1,4 @@
+import { SplashPage } from './../pages/splash/splash';
 import { SettingsPage } from './../pages/settings/settings';
 import { ChartsPage } from './../pages/charts/charts';
 import { MapPage } from './../pages/map/map';
@@ -44,6 +45,7 @@ export class MyApp {
       { title: 'Dashbaord',icon:'home', component: Dashboard },
       { title: 'Map', icon: 'pin', component: MapPage },
       { title: 'Charts', icon:'stats', component: ChartsPage},
+      { title: 'Splash', icon:'pie', component: SplashPage},
       { title: 'Logout',icon:'log-out', component: UserLogin }
     ];
   }

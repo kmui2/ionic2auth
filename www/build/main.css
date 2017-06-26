@@ -24793,6 +24793,50 @@ page-map .md home-page #map {
   height: 100%;
 }
 
+page-splash {
+  font-family: 'Avenir', sans-serif;
+}
+
+page-splash video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+page-splash ion-header img {
+  opacity: 0.8;
+  padding: 20px;
+}
+
+page-splash ion-slides {
+  height: 200px;
+  position: absolute;
+  bottom: 0;
+}
+
+page-splash ion-slides ion-slide {
+  color: #fff;
+}
+
+page-splash ion-slides h4 {
+  font-weight: bold;
+}
+
+page-splash ion-slides .swiper-pagination-bullet {
+  background: #fff;
+}
+
+page-splash button {
+  font-weight: bold;
+}
+
 .ios page-user-forgotpassword .toolbar-background, .md page-user-forgotpassword .toolbar-background, .wp page-user-forgotpassword .toolbar-background {
   background: transparent;
   border-style: none;

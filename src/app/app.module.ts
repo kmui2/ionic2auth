@@ -1,3 +1,4 @@
+import { SplashPage } from './../pages/splash/splash';
 import { SettingsPage } from './../pages/settings/settings';
 import { ChartsPage } from './../pages/charts/charts';
 import { MapPage } from './../pages/map/map';
@@ -36,7 +37,8 @@ import { UserInitialComponent } from '../components/user-initial/user-initial';
     UserInitialComponent,
     MapPage,
     ChartsPage,
-    SettingsPage
+    SettingsPage,
+    SplashPage
 
   ],
   imports: [
@@ -54,7 +56,8 @@ import { UserInitialComponent } from '../components/user-initial/user-initial';
     UserForgotpassword,
     Dashboard,
     MapPage,
-    ChartsPage
+    ChartsPage,
+    SplashPage
   ],
   providers: [
     StatusBar,
